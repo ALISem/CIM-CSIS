@@ -1,0 +1,937 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+
+   <extension point="org.eclipse.team.core.fileTypes" id="repo-ftype">
+      <?gmfgen generated="true"?>
+      <fileTypes type="text" extension="context_diagram"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser" id="resource-factory">
+      <?gmfgen generated="true"?>
+      <parser
+         type="context_diagram"
+         class="org.eclipse.gmf.runtime.emf.core.resources.GMFResourceFactory">
+      </parser>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors" id="gmf-editor">
+      <?gmfgen generated="true"?>
+      <editor
+         id="context.diagram.part.CIM3DiagramEditorID"
+         name="%editorName"
+         icon="icons/obj16/ContextDiagramFile.gif"
+         extensions="context_diagram"
+         default="true"
+         class="context.diagram.part.CIM3DiagramEditor"
+         matchingStrategy="context.diagram.part.CIM3MatchingStrategy"
+         contributorClass="context.diagram.part.CIM3DiagramActionBarContributor">
+      </editor>
+   </extension>
+   
+   <extension point="org.eclipse.ui.contexts" id="ui-context">
+      <?gmfgen generated="true"?>
+      <context
+         description="%context.description"
+         id="context.diagram.ui.diagramContext"
+         name="%context.name"
+         parentId="org.eclipse.gmf.runtime.diagram.ui.diagramContext">
+      </context>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards" id="creation-wizard">
+      <?gmfgen generated="true"?>
+  	  <wizard
+  	     name="%newWizardName"
+  	     icon="icons/obj16/ContextDiagramFile.gif"
+  	     category="org.eclipse.ui.Examples"
+  	     class="context.diagram.part.CIM3CreationWizard"
+  	     id="context.diagram.part.CIM3CreationWizardID">
+  	  	 <description>%newWizardDesc</description>  
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.popupMenus" id="init-diagram-action">
+      <?gmfgen generated="true"?>
+      <objectContribution
+            id="CIM3.diagram.InitDiagram"
+            nameFilter="*.context"
+            objectClass="org.eclipse.core.resources.IFile">
+         <action
+               label="%initDiagramActionLabel"
+               class="context.diagram.part.CIM3InitDiagramFileAction"
+               menubarPath="additions"
+               enablesFor="1"
+               id="CIM3.diagram.InitDiagramAction">
+         </action>
+      </objectContribution>
+   </extension>
+	
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.action.globalActionHandlerProviders" id="global-actions">
+      <?gmfgen generated="true"?>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramGlobalActionHandlerProvider"
+         id="CIM3Presentation">
+         <Priority name="Lowest"/>
+         <ViewId id="context.diagram.part.CIM3DiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="delete"/>
+            </ElementType>
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.DiagramEditPart">
+               <GlobalActionId actionId="save"/>
+            </ElementType>
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="save">
+               </GlobalActionId>
+            </ElementType>        
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.providers.ide.providers.DiagramIDEGlobalActionHandlerProvider"
+         id="CIM3PresentationIDE">
+         <Priority name="Lowest"/>
+         <ViewId id="context.diagram.part.CIM3DiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="bookmark"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+            class="org.eclipse.gmf.runtime.diagram.ui.render.providers.DiagramUIRenderGlobalActionHandlerProvider"
+            id="CIM3Render">
+         <Priority name="Lowest"/>
+         <ViewId id="context.diagram.part.CIM3DiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="cut"/>
+               <GlobalActionId actionId="copy"/>
+               <GlobalActionId actionId="paste"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+   </extension>
+
+
+   <extension point="org.eclipse.core.runtime.preferences" id="prefs">
+      <?gmfgen generated="true"?>
+      <initializer class="context.diagram.preferences.DiagramPreferenceInitializer"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.preferencePages" id="prefpages">
+      <?gmfgen generated="true"?>
+      <page
+            id="CIM3.diagram.general"
+            name="%prefpage.CIM3.diagram.general"
+            class="context.diagram.preferences.DiagramGeneralPreferencePage">
+      </page>
+      <page
+            id="CIM3.diagram.appearance"
+            name="%prefpage.CIM3.diagram.appearance"
+            category="CIM3.diagram.general"
+            class="context.diagram.preferences.DiagramAppearancePreferencePage">
+      </page>
+      <page
+            id="CIM3.diagram.connections"
+            name="%prefpage.CIM3.diagram.connections"
+            category="CIM3.diagram.general"
+            class="context.diagram.preferences.DiagramConnectionsPreferencePage">
+      </page>
+      <page
+            id="CIM3.diagram.printing"
+            name="%prefpage.CIM3.diagram.printing"
+            category="CIM3.diagram.general"
+            class="context.diagram.preferences.DiagramPrintingPreferencePage">
+      </page>
+      <page
+            id="CIM3.diagram.rulersAndGrid"
+            name="%prefpage.CIM3.diagram.rulersAndGrid"
+            category="CIM3.diagram.general"
+            class="context.diagram.preferences.DiagramRulersAndGridPreferencePage">
+      </page>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyContributor" id="prop-contrib">
+      <?gmfgen generated="true"?>
+      <propertyContributor
+            contributorId="CIM3.diagram"
+            labelProvider="context.diagram.sheet.CIM3SheetLabelProvider">
+         <propertyCategory category="domain"/>
+         <propertyCategory category="visual"/>
+         <propertyCategory category="extra"/>
+      </propertyContributor>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyTabs" id="proptabs">
+      <?gmfgen generated="true"?>   
+      <propertyTabs contributorId="CIM3.diagram">
+         <propertyTab
+             category="visual"
+             id="property.tab.AppearancePropertySection"
+             label="%tab.appearance"/>
+          <propertyTab
+             category="visual"
+             id="property.tab.DiagramPropertySection"
+             label="%tab.diagram"/>
+          <propertyTab
+             category="domain"
+             id="property.tab.domain"
+             label="%tab.domain"/>
+      </propertyTabs>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertySections" id="propsections">
+      <?gmfgen generated="true"?>   
+      <propertySections contributorId="CIM3.diagram">
+         <propertySection id="property.section.ConnectorAppearancePropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.ConnectionEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.ConnectionAppearancePropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection>
+         <propertySection id="property.section.ShapeColorAndFontPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.ShapeEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.ShapeColorsAndFontsPropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection> 
+         <propertySection id="property.section.DiagramColorsAndFontsPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.DiagramEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.DiagramColorsAndFontsPropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection>     
+         <propertySection id="property.section.RulerGridPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.DiagramEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.grid.RulerGridPropertySection" 
+            tab="property.tab.DiagramPropertySection">
+         </propertySection>     
+         <propertySection
+            id="property.section.domain" 
+            tab="property.tab.domain"
+            class="context.diagram.sheet.CIM3PropertySection">
+            <input type="org.eclipse.gmf.runtime.notation.View"/>
+            <input type="org.eclipse.gef.EditPart"/>
+            <input type="context.diagram.navigator.CIM3AbstractNavigatorItem"/>
+         </propertySection>
+      </propertySections>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.core.viewProviders" id="view-provider">
+      <?gmfgen generated="true"?>
+      <viewProvider class="context.diagram.providers.CIM3ViewProvider">
+         <Priority name="Lowest"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="CIM3"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4001,4002,4003,4018,4005,4006,4007,4019,4009,4010,4011,4012,4013,4020,4015,4016,4021"/>
+      </viewProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.ui.editpartProviders" id="ep-provider">
+      <?gmfgen generated="true"?>
+      <editpartProvider class="context.diagram.providers.CIM3EditPartProvider">
+         <Priority name="Lowest"/>
+         <object class="org.eclipse.gmf.runtime.notation.Diagram" id="generated-diagram">
+            <method name="getType()" value="CIM3"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-nodes">
+            <method name="getType()" value="2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Edge" id="generated-links">
+            <method name="getType()" value="4001,4002,4003,4018,4005,4006,4007,4019,4009,4010,4011,4012,4013,4020,4015,4016,4021"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-labels">
+            <method name="getType()" value="5001,5002,5003,5004,5005,5006,5017,5007,5008,5009,5010,5011,5012,5013,5014,5015,5016"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-compartments">
+            <method name="getType()" value=""/>
+         </object>
+         <context views="generated-diagram,generated-nodes,generated-links,generated-labels,generated-compartments"/>
+      </editpartProvider>
+   </extension>
+
+   
+   <extension point="org.eclipse.gmf.runtime.emf.ui.modelingAssistantProviders" id="modelassist-provider">
+      <?gmfgen generated="true"?>
+      <modelingAssistantProvider class="context.diagram.providers.assistants.CIM3ModelingAssistantProviderOfContextModelEditPart">
+         <Priority name="Lowest"/>
+         <object class="context.diagram.edit.parts.ContextModelEditPart" id="ContextModel_1000"/>
+         <context elements="ContextModel_1000"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="context.diagram.providers.assistants.CIM3ModelingAssistantProviderOfCongnitiveEditPart">
+         <Priority name="Lowest"/>
+         <object class="context.diagram.edit.parts.CongnitiveEditPart" id="Congnitive_2001"/>
+         <context elements="Congnitive_2001"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="context.diagram.providers.assistants.CIM3ModelingAssistantProviderOfIdentifyEditPart">
+         <Priority name="Lowest"/>
+         <object class="context.diagram.edit.parts.IdentifyEditPart" id="Identify_2002"/>
+         <context elements="Identify_2002"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="context.diagram.providers.assistants.CIM3ModelingAssistantProviderOfCurrentEditPart">
+         <Priority name="Lowest"/>
+         <object class="context.diagram.edit.parts.CurrentEditPart" id="Current_2003"/>
+         <context elements="Current_2003"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="context.diagram.providers.assistants.CIM3ModelingAssistantProviderOfSocialEditPart">
+         <Priority name="Lowest"/>
+         <object class="context.diagram.edit.parts.SocialEditPart" id="Social_2004"/>
+         <context elements="Social_2004"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="context.diagram.providers.assistants.CIM3ModelingAssistantProviderOfActivityEditPart">
+         <Priority name="Lowest"/>
+         <object class="context.diagram.edit.parts.ActivityEditPart" id="Activity_2005"/>
+         <context elements="Activity_2005"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="context.diagram.providers.assistants.CIM3ModelingAssistantProviderOfPastEditPart">
+         <Priority name="Lowest"/>
+         <object class="context.diagram.edit.parts.PastEditPart" id="Past_2006"/>
+         <context elements="Past_2006"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="context.diagram.providers.assistants.CIM3ModelingAssistantProviderOfRefinementEditPart">
+         <Priority name="Lowest"/>
+         <object class="context.diagram.edit.parts.RefinementEditPart" id="Refinement_2007"/>
+         <context elements="Refinement_2007"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="context.diagram.providers.assistants.CIM3ModelingAssistantProviderOfPreferenceEditPart">
+         <Priority name="Lowest"/>
+         <object class="context.diagram.edit.parts.PreferenceEditPart" id="Preference_2008"/>
+         <context elements="Preference_2008"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="context.diagram.providers.assistants.CIM3ModelingAssistantProviderOfEntityEditPart">
+         <Priority name="Lowest"/>
+         <object class="context.diagram.edit.parts.EntityEditPart" id="Entity_2009"/>
+         <context elements="Entity_2009"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="context.diagram.providers.assistants.CIM3ModelingAssistantProviderOfComputingEditPart">
+         <Priority name="Lowest"/>
+         <object class="context.diagram.edit.parts.ComputingEditPart" id="Computing_2010"/>
+         <context elements="Computing_2010"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="context.diagram.providers.assistants.CIM3ModelingAssistantProviderOfFutureEditPart">
+         <Priority name="Lowest"/>
+         <object class="context.diagram.edit.parts.FutureEditPart" id="Future_2011"/>
+         <context elements="Future_2011"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="context.diagram.providers.assistants.CIM3ModelingAssistantProviderOfRelativeEditPart">
+         <Priority name="Lowest"/>
+         <object class="context.diagram.edit.parts.RelativeEditPart" id="Relative_2012"/>
+         <context elements="Relative_2012"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="context.diagram.providers.assistants.CIM3ModelingAssistantProviderOfContextSourceEditPart">
+         <Priority name="Lowest"/>
+         <object class="context.diagram.edit.parts.ContextSourceEditPart" id="ContextSource_2013"/>
+         <context elements="ContextSource_2013"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="context.diagram.providers.assistants.CIM3ModelingAssistantProviderOfFocusEditPart">
+         <Priority name="Lowest"/>
+         <object class="context.diagram.edit.parts.FocusEditPart" id="Focus_2014"/>
+         <context elements="Focus_2014"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="context.diagram.providers.assistants.CIM3ModelingAssistantProviderOfFixedEditPart">
+         <Priority name="Lowest"/>
+         <object class="context.diagram.edit.parts.FixedEditPart" id="Fixed_2015"/>
+         <context elements="Fixed_2015"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="context.diagram.providers.assistants.CIM3ModelingAssistantProviderOfCompositeEditPart">
+         <Priority name="Lowest"/>
+         <object class="context.diagram.edit.parts.CompositeEditPart" id="Composite_2016"/>
+         <context elements="Composite_2016"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="context.diagram.providers.assistants.CIM3ModelingAssistantProviderOfLocationEditPart">
+         <Priority name="Lowest"/>
+         <object class="context.diagram.edit.parts.LocationEditPart" id="Location_2017"/>
+         <context elements="Location_2017"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="context.diagram.providers.assistants.CIM3ModelingAssistantProviderOfUserEditPart">
+         <Priority name="Lowest"/>
+         <object class="context.diagram.edit.parts.UserEditPart" id="User_2018"/>
+         <context elements="User_2018"/>
+      </modelingAssistantProvider>
+      
+   </extension>
+
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.iconProviders" id="icon-provider">
+      <?gmfgen generated="true"?>
+      <IconProvider class="context.diagram.providers.CIM3IconProvider">
+         <Priority name="Low"/>
+      </IconProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.parserProviders" id="parser-provider">
+      <?gmfgen generated="true"?>
+      <ParserProvider class="context.diagram.providers.CIM3ParserProvider">
+         <Priority name="Lowest"/>
+      </ParserProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypes" id="element-types">
+      <?gmfgen generated="true"?>
+      <metamodel nsURI="context">
+         <metamodelType
+               id="CIM3.diagram.ContextModel_1000"
+               name="%metatype.name.ContextModel_1000"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="ContextModel"
+               edithelper="context.diagram.edit.helpers.ContextModelEditHelper">
+            <param name="semanticHint" value="1000"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="context">
+         <metamodelType
+               id="CIM3.diagram.Congnitive_2001"
+               name="%metatype.name.Congnitive_2001"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Congnitive"
+               edithelper="context.diagram.edit.helpers.CongnitiveEditHelper">
+            <param name="semanticHint" value="2001"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="context">
+         <metamodelType
+               id="CIM3.diagram.Identify_2002"
+               name="%metatype.name.Identify_2002"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Identify"
+               edithelper="context.diagram.edit.helpers.IdentifyEditHelper">
+            <param name="semanticHint" value="2002"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="context">
+         <metamodelType
+               id="CIM3.diagram.Current_2003"
+               name="%metatype.name.Current_2003"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Current"
+               edithelper="context.diagram.edit.helpers.CurrentEditHelper">
+            <param name="semanticHint" value="2003"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="context">
+         <metamodelType
+               id="CIM3.diagram.Social_2004"
+               name="%metatype.name.Social_2004"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Social"
+               edithelper="context.diagram.edit.helpers.SocialEditHelper">
+            <param name="semanticHint" value="2004"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="context">
+         <metamodelType
+               id="CIM3.diagram.Activity_2005"
+               name="%metatype.name.Activity_2005"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Activity"
+               edithelper="context.diagram.edit.helpers.ActivityEditHelper">
+            <param name="semanticHint" value="2005"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="context">
+         <metamodelType
+               id="CIM3.diagram.Past_2006"
+               name="%metatype.name.Past_2006"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Past"
+               edithelper="context.diagram.edit.helpers.PastEditHelper">
+            <param name="semanticHint" value="2006"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="context">
+         <metamodelType
+               id="CIM3.diagram.Refinement_2007"
+               name="%metatype.name.Refinement_2007"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Refinement"
+               edithelper="context.diagram.edit.helpers.RefinementEditHelper">
+            <param name="semanticHint" value="2007"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="context">
+         <metamodelType
+               id="CIM3.diagram.Preference_2008"
+               name="%metatype.name.Preference_2008"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Preference"
+               edithelper="context.diagram.edit.helpers.PreferenceEditHelper">
+            <param name="semanticHint" value="2008"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="context">
+         <metamodelType
+               id="CIM3.diagram.Entity_2009"
+               name="%metatype.name.Entity_2009"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Entity"
+               edithelper="context.diagram.edit.helpers.EntityEditHelper">
+            <param name="semanticHint" value="2009"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="context">
+         <metamodelType
+               id="CIM3.diagram.Computing_2010"
+               name="%metatype.name.Computing_2010"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Computing"
+               edithelper="context.diagram.edit.helpers.ComputingEditHelper">
+            <param name="semanticHint" value="2010"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="context">
+         <metamodelType
+               id="CIM3.diagram.Future_2011"
+               name="%metatype.name.Future_2011"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Future"
+               edithelper="context.diagram.edit.helpers.FutureEditHelper">
+            <param name="semanticHint" value="2011"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="context">
+         <metamodelType
+               id="CIM3.diagram.Relative_2012"
+               name="%metatype.name.Relative_2012"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Relative"
+               edithelper="context.diagram.edit.helpers.RelativeEditHelper">
+            <param name="semanticHint" value="2012"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="context">
+         <metamodelType
+               id="CIM3.diagram.ContextSource_2013"
+               name="%metatype.name.ContextSource_2013"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="ContextSource"
+               edithelper="context.diagram.edit.helpers.ContextSourceEditHelper">
+            <param name="semanticHint" value="2013"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="context">
+         <metamodelType
+               id="CIM3.diagram.Focus_2014"
+               name="%metatype.name.Focus_2014"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Focus"
+               edithelper="context.diagram.edit.helpers.FocusEditHelper">
+            <param name="semanticHint" value="2014"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="context">
+         <metamodelType
+               id="CIM3.diagram.Fixed_2015"
+               name="%metatype.name.Fixed_2015"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Fixed"
+               edithelper="context.diagram.edit.helpers.FixedEditHelper">
+            <param name="semanticHint" value="2015"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="context">
+         <metamodelType
+               id="CIM3.diagram.Composite_2016"
+               name="%metatype.name.Composite_2016"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Composite"
+               edithelper="context.diagram.edit.helpers.CompositeEditHelper">
+            <param name="semanticHint" value="2016"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="context">
+         <metamodelType
+               id="CIM3.diagram.Location_2017"
+               name="%metatype.name.Location_2017"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Location"
+               edithelper="context.diagram.edit.helpers.LocationEditHelper">
+            <param name="semanticHint" value="2017"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="context">
+         <metamodelType
+               id="CIM3.diagram.User_2018"
+               name="%metatype.name.User_2018"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="User"
+               edithelper="context.diagram.edit.helpers.UserEditHelper">
+            <param name="semanticHint" value="2018"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="context">
+         <specializationType
+               id="CIM3.diagram.ContextElementRefinement_4001"
+               name="%metatype.name.ContextElementRefinement_4001"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4001"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="context">
+         <specializationType
+               id="CIM3.diagram.RefinementRefiningcontexts_4002"
+               name="%metatype.name.RefinementRefiningcontexts_4002"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4002"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="context">
+         <metamodelType
+               id="CIM3.diagram.Parallel_4003"
+               name="%metatype.name.Parallel_4003"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Parallel"
+               edithelper="context.diagram.edit.helpers.ParallelEditHelper">
+            <param name="semanticHint" value="4003"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="context">
+         <specializationType
+               id="CIM3.diagram.RelationshipTocontextelement_4018"
+               name="%metatype.name.RelationshipTocontextelement_4018"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4018"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="context">
+         <metamodelType
+               id="CIM3.diagram.Profiled_4005"
+               name="%metatype.name.Profiled_4005"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Profiled"
+               edithelper="context.diagram.edit.helpers.ProfiledEditHelper">
+            <param name="semanticHint" value="4005"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="context">
+         <metamodelType
+               id="CIM3.diagram.Characterization_4006"
+               name="%metatype.name.Characterization_4006"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Characterization"
+               edithelper="context.diagram.edit.helpers.CharacterizationEditHelper">
+            <param name="semanticHint" value="4006"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="context">
+         <metamodelType
+               id="CIM3.diagram.Causal_4007"
+               name="%metatype.name.Causal_4007"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Causal"
+               edithelper="context.diagram.edit.helpers.CausalEditHelper">
+            <param name="semanticHint" value="4007"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="context">
+         <specializationType
+               id="CIM3.diagram.RelationshipTocontextelement_4019"
+               name="%metatype.name.RelationshipTocontextelement_4019"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4019"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="context">
+         <metamodelType
+               id="CIM3.diagram.Validity_4009"
+               name="%metatype.name.Validity_4009"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Validity"
+               edithelper="context.diagram.edit.helpers.ValidityEditHelper">
+            <param name="semanticHint" value="4009"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="context">
+         <metamodelType
+               id="CIM3.diagram.Derived_4010"
+               name="%metatype.name.Derived_4010"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Derived"
+               edithelper="context.diagram.edit.helpers.DerivedEditHelper">
+            <param name="semanticHint" value="4010"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="context">
+         <metamodelType
+               id="CIM3.diagram.Static_4011"
+               name="%metatype.name.Static_4011"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Static"
+               edithelper="context.diagram.edit.helpers.StaticEditHelper">
+            <param name="semanticHint" value="4011"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="context">
+         <metamodelType
+               id="CIM3.diagram.Sensed_4012"
+               name="%metatype.name.Sensed_4012"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Sensed"
+               edithelper="context.diagram.edit.helpers.SensedEditHelper">
+            <param name="semanticHint" value="4012"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="context">
+         <metamodelType
+               id="CIM3.diagram.Support_4013"
+               name="%metatype.name.Support_4013"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Support"
+               edithelper="context.diagram.edit.helpers.SupportEditHelper">
+            <param name="semanticHint" value="4013"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="context">
+         <specializationType
+               id="CIM3.diagram.RelationshipTocontextelement_4020"
+               name="%metatype.name.RelationshipTocontextelement_4020"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4020"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="context">
+         <metamodelType
+               id="CIM3.diagram.Relevance_4015"
+               name="%metatype.name.Relevance_4015"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Relevance"
+               edithelper="context.diagram.edit.helpers.RelevanceEditHelper">
+            <param name="semanticHint" value="4015"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="context">
+         <metamodelType
+               id="CIM3.diagram.Conflict_4016"
+               name="%metatype.name.Conflict_4016"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Conflict"
+               edithelper="context.diagram.edit.helpers.ConflictEditHelper">
+            <param name="semanticHint" value="4016"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="context">
+         <specializationType
+               id="CIM3.diagram.RelationshipTocontextelement_4021"
+               name="%metatype.name.RelationshipTocontextelement_4021"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4021"/>
+         </specializationType>
+      </metamodel>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypeBindings" id="element-types-bindings">
+      <?gmfgen generated="true"?>
+      <clientContext id="CIM3.diagram.TypeContext">
+         <enablement>
+            <test
+               property="org.eclipse.gmf.runtime.emf.core.editingDomain"
+               value="CIM3.diagram.EditingDomain"/>
+         </enablement>
+      </clientContext> 
+      <binding context="CIM3.diagram.TypeContext">
+         <elementType ref="CIM3.diagram.ContextModel_1000"/>
+         <elementType ref="CIM3.diagram.Congnitive_2001"/>
+         <elementType ref="CIM3.diagram.Identify_2002"/>
+         <elementType ref="CIM3.diagram.Current_2003"/>
+         <elementType ref="CIM3.diagram.Social_2004"/>
+         <elementType ref="CIM3.diagram.Activity_2005"/>
+         <elementType ref="CIM3.diagram.Past_2006"/>
+         <elementType ref="CIM3.diagram.Refinement_2007"/>
+         <elementType ref="CIM3.diagram.Preference_2008"/>
+         <elementType ref="CIM3.diagram.Entity_2009"/>
+         <elementType ref="CIM3.diagram.Computing_2010"/>
+         <elementType ref="CIM3.diagram.Future_2011"/>
+         <elementType ref="CIM3.diagram.Relative_2012"/>
+         <elementType ref="CIM3.diagram.ContextSource_2013"/>
+         <elementType ref="CIM3.diagram.Focus_2014"/>
+         <elementType ref="CIM3.diagram.Fixed_2015"/>
+         <elementType ref="CIM3.diagram.Composite_2016"/>
+         <elementType ref="CIM3.diagram.Location_2017"/>
+         <elementType ref="CIM3.diagram.User_2018"/>
+         <elementType ref="CIM3.diagram.ContextElementRefinement_4001"/>
+         <elementType ref="CIM3.diagram.RefinementRefiningcontexts_4002"/>
+         <elementType ref="CIM3.diagram.Parallel_4003"/>
+         <elementType ref="CIM3.diagram.RelationshipTocontextelement_4018"/>
+         <elementType ref="CIM3.diagram.Profiled_4005"/>
+         <elementType ref="CIM3.diagram.Characterization_4006"/>
+         <elementType ref="CIM3.diagram.Causal_4007"/>
+         <elementType ref="CIM3.diagram.RelationshipTocontextelement_4019"/>
+         <elementType ref="CIM3.diagram.Validity_4009"/>
+         <elementType ref="CIM3.diagram.Derived_4010"/>
+         <elementType ref="CIM3.diagram.Static_4011"/>
+         <elementType ref="CIM3.diagram.Sensed_4012"/>
+         <elementType ref="CIM3.diagram.Support_4013"/>
+         <elementType ref="CIM3.diagram.RelationshipTocontextelement_4020"/>
+         <elementType ref="CIM3.diagram.Relevance_4015"/>
+         <elementType ref="CIM3.diagram.Conflict_4016"/>
+         <elementType ref="CIM3.diagram.RelationshipTocontextelement_4021"/>
+         <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>
+      </binding>
+   </extension>
+	   <extension point="org.eclipse.core.expressions.propertyTesters" id="navigator-proptest.isURIEditorInput">
+      <?gmfgen generated="true"?>
+       <propertyTester
+           id="CIM3.diagram.URIEditorInputPropertyTester"
+           type="org.eclipse.emf.common.ui.URIEditorInput"
+           namespace="CIM3.diagram"
+           properties="isURIEditorInput"
+           class="context.diagram.part.CIM3UriEditorInputTester">
+       </propertyTester>
+   </extension>
+
+	   <extension point="org.eclipse.ui.navigator.viewer" id="navigator-viewbinding">
+      <?gmfgen generated="true"?>
+      <viewerContentBinding viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+         <includes>
+            <contentExtension pattern="CIM3.diagram.resourceContent"/>
+			<contentExtension pattern="CIM3.diagram.domainResourceContent"/>
+            <contentExtension pattern="CIM3.diagram.navigatorLinkHelper"/>
+         </includes>
+      </viewerContentBinding>
+      <viewerActionBinding viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+         <includes>
+            <actionExtension pattern="CIM3.diagram.navigatorActionProvider"/>
+         </includes>
+      </viewerActionBinding>
+   </extension>
+
+   <extension point="org.eclipse.ui.navigator.navigatorContent" id="navigator-content">
+      <?gmfgen generated="true"?>
+      <navigatorContent
+            id="CIM3.diagram.resourceContent" 
+            name="%navigatorContentName" 
+            priority="normal" 
+            contentProvider="context.diagram.navigator.CIM3NavigatorContentProvider" 
+            labelProvider="context.diagram.navigator.CIM3NavigatorLabelProvider"
+            icon="icons/obj16/ContextDiagramFile.gif"
+            activeByDefault="true">
+         <triggerPoints>
+            <or>
+	           <and>
+    	          <instanceof value="org.eclipse.core.resources.IFile"/>
+        	      <test property="org.eclipse.core.resources.extension" value="context_diagram"/>
+               </and>
+               <instanceof value="context.diagram.navigator.CIM3AbstractNavigatorItem"/>
+            </or>
+         </triggerPoints>
+         <possibleChildren>
+            <or>
+         	   <instanceof value="context.diagram.navigator.CIM3AbstractNavigatorItem"/>
+            </or>
+         </possibleChildren>
+         <commonSorter 
+               id="CIM3.diagram.navigatorSorter" 
+               class="context.diagram.navigator.CIM3NavigatorSorter">
+            <parentExpression>
+               <or>
+	              <and>
+    	             <instanceof value="org.eclipse.core.resources.IFile"/>
+        	         <test property="org.eclipse.core.resources.extension" value="context_diagram"/>
+                  </and>
+                  <instanceof value="context.diagram.navigator.CIM3AbstractNavigatorItem"/>
+               </or>
+            </parentExpression>
+         </commonSorter>
+      </navigatorContent>
+      <navigatorContent
+            id="CIM3.diagram.domainResourceContent" 
+            name="%domainNavigatorContentName" 
+            priority="normal" 
+            contentProvider="context.diagram.navigator.CIM3DomainNavigatorContentProvider" 
+            labelProvider="context.diagram.navigator.CIM3DomainNavigatorLabelProvider"
+            icon="icons/obj16/ContextDiagramFile.gif"
+            activeByDefault="true">
+         <triggerPoints>
+            <or>
+	           <and>
+    	          <instanceof value="org.eclipse.core.resources.IFile"/>
+        	      <test property="org.eclipse.core.resources.extension" value="context"/>
+               </and>
+               <instanceof value="context.diagram.navigator.CIM3DomainNavigatorItem"/>
+            </or>
+         </triggerPoints>
+         <possibleChildren>
+            <instanceof value="context.diagram.navigator.CIM3DomainNavigatorItem"/>
+         </possibleChildren>
+      </navigatorContent>
+      <actionProvider
+            id="CIM3.diagram.navigatorActionProvider"
+            class="context.diagram.navigator.CIM3NavigatorActionProvider">
+         <enablement>
+            <or>
+               <instanceof value="context.diagram.navigator.CIM3AbstractNavigatorItem"/>
+            </or>
+         </enablement>
+      </actionProvider>
+   </extension>
+   
+	   <extension point="org.eclipse.ui.navigator.linkHelper" id="navigator-linkhelper">
+      <?gmfgen generated="true"?>
+      <linkHelper
+            id="CIM3.diagram.navigatorLinkHelper"
+            class="context.diagram.navigator.CIM3NavigatorLinkHelper">
+         <editorInputEnablement>
+            <and>
+               <instanceof value="org.eclipse.emf.common.ui.URIEditorInput"/>
+               <test property="CIM3.diagram.isURIEditorInput"/>
+            </and>
+         </editorInputEnablement>
+         <selectionEnablement>
+            <instanceof value="context.diagram.navigator.CIM3AbstractNavigatorItem"/>
+         </selectionEnablement>
+      </linkHelper>
+   </extension>
+   <extension point="org.eclipse.ui.commands" id="update-cmd">
+      <?gmfgen generated="true"?>
+      <command
+         categoryId="org.eclipse.ui.category.edit"
+         defaultHandler="context.diagram.part.CIM3DiagramUpdateCommand"
+         description="%update.diagram.description"
+         id="context.diagram.updateDiagram"
+         name="%update.diagram.name"/>
+   </extension>
+   
+   <extension point="org.eclipse.ui.bindings" id="update-cmd-binding">
+      <?gmfgen generated="true"?>
+      <key 
+         commandId="context.diagram.updateDiagram"
+         contextId="context.diagram.ui.diagramContext"
+         schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+         sequence="F5"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.menus" id="context-menus">
+      <?gmfgen generated="true"?>
+      <!-- menuContribution locationURI="menu:org.eclipse.ui.main.menu?after=">
+      </menuContribution>
+      <menuContribution locationURI="toolbar:org.eclipse.ui.main.toolbar?after=">
+      </menuContribution -->
+      <menuContribution locationURI="popup:org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu">
+         <command commandId="CIM3.diagram.LoadResourceAction">
+            <visibleWhen>
+               <and>
+                  <with variable="activePartId"><equals value="context.diagram.part.CIM3DiagramEditorID"/></with>
+                  <with variable="selection"><iterate ifEmpty="false"> 
+                     <instanceof value="context.diagram.edit.parts.ContextModelEditPart"/>
+                  </iterate></with>
+               </and>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+   </extension>
+
+   <extension point="org.eclipse.ui.commands" id="menu-commands">
+      <?gmfgen generated="true"?>
+      <category id="context.diagram.part.CIM3DiagramEditorID" name="%cmdcategory.name" description="%cmdcategory.desc"/>
+      <command id="CIM3.diagram.LoadResourceAction"
+         name="Load Resource"
+         categoryId="context.diagram.part.CIM3DiagramEditorID"
+         defaultHandler="context.diagram.part.LoadResourceAction"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.handlers" id="menu-handlers">
+      <?gmfgen generated="true"?>
+   </extension>
+
+   <!-- optionally, specify keybindings -->
+</plugin>

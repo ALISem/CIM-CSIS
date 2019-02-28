@@ -1,0 +1,7 @@
+eclipse.preferences.version=1
+gmf_dashboard/domainGenerationModel=platform\:/resource/CIM3/model/CIM3.genmodel
+gmf_dashboard/domainModel=platform\:/resource/CIM3/model/CIM3.ecore
+gmf_dashboard/generationModel=platform\:/resource/CIM3/model/CIM3.gmfgen
+gmf_dashboard/graphicalDefinitionModel=platform\:/resource/CIM3/model/CIM3.gmfgraph
+gmf_dashboard/mappingModel=platform\:/resource/CIM3/model/CIM3.gmfmap
+gmf_dashboard/toolingDefinitionModel=platform\:/resource/CIM3/model/CIM3.gmftool

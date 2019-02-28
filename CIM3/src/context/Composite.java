@@ -1,0 +1,40 @@
+/**
+ */
+package context;
+
+import org.eclipse.emf.common.util.EList;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Composite</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link context.Composite#getAtomicContext <em>Atomic Context</em>}</li>
+ * </ul>
+ *
+ * @see context.ContextPackage#getComposite()
+ * @model
+ * @generated
+ */
+public interface Composite extends ContextElement {
+	/**
+	 * Returns the value of the '<em><b>Atomic Context</b></em>' reference list.
+	 * The list contents are of type {@link context.Atomic}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Atomic Context</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Atomic Context</em>' reference list.
+	 * @see context.ContextPackage#getComposite_AtomicContext()
+	 * @model lower="2"
+	 * @generated
+	 */
+	EList<Atomic> getAtomicContext();
+
+} // Composite

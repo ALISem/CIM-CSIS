@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="context" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_r_9CADnGEemCsK_z-Yl5Og" type="CM3" name="smartmeetingroom.context_diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_zwQVkDnGEemCsK_z-Yl5Og" type="2003">
+    <children xmi:type="notation:DecorationNode" xmi:id="_zwRjsDnGEemCsK_z-Yl5Og" type="5003"/>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_zwQVkTnGEemCsK_z-Yl5Og"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_zwQVkjnGEemCsK_z-Yl5Og" fontName="Segoe UI" fontHeight="12"/>
+    <element xmi:type="context:Composite" href="smartmeetingroom.context#//@contextelements.0"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zwQVkznGEemCsK_z-Yl5Og" x="732" y="24" width="181" height="37"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_7q-wcDnGEemCsK_z-Yl5Og" type="2003">
+    <children xmi:type="notation:DecorationNode" xmi:id="_7q_XgDnGEemCsK_z-Yl5Og" type="5003"/>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_7q-wcTnGEemCsK_z-Yl5Og"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_7q-wcjnGEemCsK_z-Yl5Og" fontName="Segoe UI" fontHeight="12"/>
+    <element xmi:type="context:Composite" href="smartmeetingroom.context#//@contextelements.1"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7q-wcznGEemCsK_z-Yl5Og" x="413" y="24" width="224" height="37"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_Of95cDnHEemCsK_z-Yl5Og" type="2012">
+    <children xmi:type="notation:DecorationNode" xmi:id="_Of95dDnHEemCsK_z-Yl5Og" type="5013"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_Of95dTnHEemCsK_z-Yl5Og" type="5028"/>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_Of95cTnHEemCsK_z-Yl5Og"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_Of95cjnHEemCsK_z-Yl5Og" fontName="Segoe UI" fontHeight="12"/>
+    <element xmi:type="context:Entity" href="smartmeetingroom.context#//@entities.0"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Of95cznHEemCsK_z-Yl5Og" x="216" y="168" width="129" height="46"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_u6UE4DnHEemCsK_z-Yl5Og" type="2008">
+    <children xmi:type="notation:DecorationNode" xmi:id="_u6UE5DnHEemCsK_z-Yl5Og" type="5008"/>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_u6UE4TnHEemCsK_z-Yl5Og"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_u6UE4jnHEemCsK_z-Yl5Og" fontName="Segoe UI" fontHeight="12"/>
+    <element xmi:type="context:Refinement" href="smartmeetingroom.context#//@refinements.0"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_u6UE4znHEemCsK_z-Yl5Og" x="492" y="156"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_4hk6EDnHEemCsK_z-Yl5Og" type="2023">
+    <children xmi:type="notation:DecorationNode" xmi:id="_4hk6FDnHEemCsK_z-Yl5Og" type="5021"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_4hk6FTnHEemCsK_z-Yl5Og" type="5036"/>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_4hk6ETnHEemCsK_z-Yl5Og"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_4hk6EjnHEemCsK_z-Yl5Og" fontName="Segoe UI" fontHeight="12"/>
+    <element xmi:type="context:Atomic" href="smartmeetingroom.context#//@contextelements.2"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4hk6EznHEemCsK_z-Yl5Og" x="192" y="264"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_EOTm8DnIEemCsK_z-Yl5Og" type="2023">
+    <children xmi:type="notation:DecorationNode" xmi:id="_EOTm9DnIEemCsK_z-Yl5Og" type="5021"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_EOTm9TnIEemCsK_z-Yl5Og" type="5036"/>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_EOTm8TnIEemCsK_z-Yl5Og"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_EOTm8jnIEemCsK_z-Yl5Og" fontName="Segoe UI" fontHeight="12"/>
+    <element xmi:type="context:Atomic" href="smartmeetingroom.context#//@contextelements.3"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EOTm8znIEemCsK_z-Yl5Og" x="348" y="264"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_O9j-8DnIEemCsK_z-Yl5Og" type="2023">
+    <children xmi:type="notation:DecorationNode" xmi:id="_O9j-9DnIEemCsK_z-Yl5Og" type="5021"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_O9j-9TnIEemCsK_z-Yl5Og" type="5036"/>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_O9j-8TnIEemCsK_z-Yl5Og"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_O9j-8jnIEemCsK_z-Yl5Og" fontName="Segoe UI" fontHeight="12"/>
+    <element xmi:type="context:Atomic" href="smartmeetingroom.context#//@contextelements.4"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_O9j-8znIEemCsK_z-Yl5Og" x="720" y="264"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_LdFFUDnJEemCsK_z-Yl5Og" type="2007">
+    <children xmi:type="notation:DecorationNode" xmi:id="_LdFFVDnJEemCsK_z-Yl5Og" type="5007"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_LdFsYDnJEemCsK_z-Yl5Og" type="5024"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_LdFsYTnJEemCsK_z-Yl5Og" type="5025"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_LdFsYjnJEemCsK_z-Yl5Og" type="5026"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_LdFsYznJEemCsK_z-Yl5Og" type="5027"/>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_LdFFUTnJEemCsK_z-Yl5Og"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_LdFFUjnJEemCsK_z-Yl5Og" fontName="Segoe UI" fontHeight="12"/>
+    <element xmi:type="context:Focus" href="smartmeetingroom.context#//@foci.0"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LdFFUznJEemCsK_z-Yl5Og" x="720" y="120" width="205" height="121"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_Qp89YDnKEemCsK_z-Yl5Og" type="2024">
+    <children xmi:type="notation:DecorationNode" xmi:id="_Qp89ZDnKEemCsK_z-Yl5Og" type="5034"/>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_Qp89YTnKEemCsK_z-Yl5Og"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_Qp89YjnKEemCsK_z-Yl5Og" fontName="Segoe UI" fontHeight="12"/>
+    <element xmi:type="context:Property" href="smartmeetingroom.context#//@properties.0"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Qp89YznKEemCsK_z-Yl5Og" x="205" y="408" width="102"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_U4O7sDnKEemCsK_z-Yl5Og" type="2024">
+    <children xmi:type="notation:DecorationNode" xmi:id="_U4O7tDnKEemCsK_z-Yl5Og" type="5034"/>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_U4O7sTnKEemCsK_z-Yl5Og"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_U4O7sjnKEemCsK_z-Yl5Og" fontName="Segoe UI" fontHeight="12"/>
+    <element xmi:type="context:Property" href="smartmeetingroom.context#//@properties.1"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_U4O7sznKEemCsK_z-Yl5Og" x="528" y="408" width="85"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_Wz5-MDnKEemCsK_z-Yl5Og" type="2024">
+    <children xmi:type="notation:DecorationNode" xmi:id="_Wz5-NDnKEemCsK_z-Yl5Og" type="5034"/>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_Wz5-MTnKEemCsK_z-Yl5Og"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_Wz5-MjnKEemCsK_z-Yl5Og" fontName="Segoe UI" fontHeight="12"/>
+    <element xmi:type="context:Property" href="smartmeetingroom.context#//@properties.2"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Wz5-MznKEemCsK_z-Yl5Og" x="744" y="408" width="61"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_YshssDnKEemCsK_z-Yl5Og" type="2018">
+    <children xmi:type="notation:DecorationNode" xmi:id="_YshstDnKEemCsK_z-Yl5Og" type="5019"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_YshstTnKEemCsK_z-Yl5Og" type="5032"/>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_YshssTnKEemCsK_z-Yl5Og"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_YshssjnKEemCsK_z-Yl5Og" fontName="Segoe UI" fontHeight="12"/>
+    <element xmi:type="context:ContextSource" href="smartmeetingroom.context#//@sources.0"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YshssznKEemCsK_z-Yl5Og" y="269" width="113"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_g6o9oDnKEemCsK_z-Yl5Og" type="2018">
+    <children xmi:type="notation:DecorationNode" xmi:id="_g6o9pDnKEemCsK_z-Yl5Og" type="5019"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_g6o9pTnKEemCsK_z-Yl5Og" type="5032"/>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_g6o9oTnKEemCsK_z-Yl5Og"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_g6o9ojnKEemCsK_z-Yl5Og" fontName="Segoe UI" fontHeight="12"/>
+    <element xmi:type="context:ContextSource" href="smartmeetingroom.context#//@sources.1"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g6o9oznKEemCsK_z-Yl5Og" x="612" y="348" width="98"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_jwABMDnKEemCsK_z-Yl5Og" type="2018">
+    <children xmi:type="notation:DecorationNode" xmi:id="_jwAoQDnKEemCsK_z-Yl5Og" type="5019"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_jwAoQTnKEemCsK_z-Yl5Og" type="5032"/>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_jwABMTnKEemCsK_z-Yl5Og"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_jwABMjnKEemCsK_z-Yl5Og" fontName="Segoe UI" fontHeight="12"/>
+    <element xmi:type="context:ContextSource" href="smartmeetingroom.context#//@sources.2"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jwABMznKEemCsK_z-Yl5Og" x="852" y="269" width="121"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_BYmqEDpVEemqTIIetfViKQ" type="2024">
+    <children xmi:type="notation:DecorationNode" xmi:id="_BYnRIDpVEemqTIIetfViKQ" type="5034"/>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_BYmqETpVEemqTIIetfViKQ"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_BYmqEjpVEemqTIIetfViKQ" fontName="Segoe UI" fontHeight="12"/>
+    <element xmi:type="context:Property" href="smartmeetingroom.context#//@properties.3"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BYmqEzpVEemqTIIetfViKQ" x="420" y="408" width="86"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_scHXIDpWEemqTIIetfViKQ" type="2015">
+    <children xmi:type="notation:DecorationNode" xmi:id="_scH-MDpWEemqTIIetfViKQ" type="5016"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_scH-MTpWEemqTIIetfViKQ" type="5029"/>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_scHXITpWEemqTIIetfViKQ"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_scHXIjpWEemqTIIetfViKQ" fontName="Segoe UI"/>
+    <element xmi:type="context:Range" href="smartmeetingroom.context#//@ranges.0"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_scHXIzpWEemqTIIetfViKQ" x="888" y="408"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_u1AhIDpWEemqTIIetfViKQ" type="2015">
+    <children xmi:type="notation:DecorationNode" xmi:id="_u1AhJDpWEemqTIIetfViKQ" type="5016"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_u1BIMDpWEemqTIIetfViKQ" type="5029"/>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_u1AhITpWEemqTIIetfViKQ"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_u1AhIjpWEemqTIIetfViKQ" fontName="Segoe UI"/>
+    <element xmi:type="context:Range" href="smartmeetingroom.context#//@ranges.1"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_u1AhIzpWEemqTIIetfViKQ" x="72" y="408"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_r_9CATnGEemCsK_z-Yl5Og"/>
+  <element xmi:type="context:ContextModel" href="smartmeetingroom.context#/"/>
+  <edges xmi:type="notation:Connector" xmi:id="_Fb4p0DnHEemCsK_z-Yl5Og" type="4017" source="_7q-wcDnGEemCsK_z-Yl5Og" target="_zwQVkDnGEemCsK_z-Yl5Og" routing="Rectilinear">
+    <children xmi:type="notation:DecorationNode" xmi:id="_Fb5Q4DnHEemCsK_z-Yl5Og" type="6013">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_Fb5Q4TnHEemCsK_z-Yl5Og" x="-1" y="-14"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_Fb4p0TnHEemCsK_z-Yl5Og" fontName="Segoe UI" fontHeight="12"/>
+    <element xmi:type="context:Causal" href="smartmeetingroom.context#//@relationships.0"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Fb4p0jnHEemCsK_z-Yl5Og" points="[112, 6, -231, 0]$[207, 6, -136, 0]"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_FcoQsTnHEemCsK_z-Yl5Og" id="(0.7560975609756098,0.6486486486486487)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_iJqc4DnHEemCsK_z-Yl5Og" type="4008" source="_7q-wcDnGEemCsK_z-Yl5Og" target="_Of95cDnHEemCsK_z-Yl5Og" routing="Rectilinear">
+    <children xmi:type="notation:DecorationNode" xmi:id="_iJrD8DnHEemCsK_z-Yl5Og" type="6007">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_iJrD8TnHEemCsK_z-Yl5Og" x="-94" y="54"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_iJqc4TnHEemCsK_z-Yl5Og" fontName="Segoe UI" fontHeight="12"/>
+    <element xmi:type="context:Characterization" href="smartmeetingroom.context#//@characterizations.0"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_iJqc4jnHEemCsK_z-Yl5Og" points="[31, 17, 99, -121]$[31, 148, 99, 10]$[-68, 148, 0, 10]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_iJsSEDnHEemCsK_z-Yl5Og" id="(0.0,0.5405405405405406)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_iJsSETnHEemCsK_z-Yl5Og" id="(1.0,0.30434782608695654)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_dXHecDnIEemCsK_z-Yl5Og" type="4007" source="_O9j-8DnIEemCsK_z-Yl5Og" target="_u6UE4DnHEemCsK_z-Yl5Og">
+    <styles xmi:type="notation:FontStyle" xmi:id="_dXHecTnIEemCsK_z-Yl5Og" fontName="Segoe UI" fontHeight="12"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_dXHecjnIEemCsK_z-Yl5Og" points="[-49, -23, 132, 64]$[-175, -85, 6, 2]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Ll_1sDpWEemqTIIetfViKQ" id="(0.16101694915254236,0.017543859649122806)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_dXIskDnIEemCsK_z-Yl5Og" id="(0.4,0.9)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_fF-M8DnIEemCsK_z-Yl5Og" type="4001" source="_EOTm8DnIEemCsK_z-Yl5Og" target="_u6UE4DnHEemCsK_z-Yl5Og" routing="Rectilinear">
+    <styles xmi:type="notation:FontStyle" xmi:id="_fF-M8TnIEemCsK_z-Yl5Og" fontName="Segoe UI" fontHeight="12"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_fF-M8jnIEemCsK_z-Yl5Og" points="[-6, -28, -5, 100]$[-6, -108, -5, 20]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_gHpsYDnIEemCsK_z-Yl5Og" type="4001" source="_4hk6EDnHEemCsK_z-Yl5Og" target="_u6UE4DnHEemCsK_z-Yl5Og">
+    <styles xmi:type="notation:FontStyle" xmi:id="_gHpsYTnIEemCsK_z-Yl5Og" fontName="Segoe UI" fontHeight="12"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_gHpsYjnIEemCsK_z-Yl5Og" points="[48, -23, -196, 88]$[238, -131, -6, -20]"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_pXI6wDnIEemCsK_z-Yl5Og" id="(0.6363636363636364,0.775)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_kTmvcDnIEemCsK_z-Yl5Og" type="4004" source="_u6UE4DnHEemCsK_z-Yl5Og" target="_7q-wcDnGEemCsK_z-Yl5Og" routing="Rectilinear">
+    <styles xmi:type="notation:FontStyle" xmi:id="_kTmvcTnIEemCsK_z-Yl5Og" fontName="Segoe UI" fontHeight="12"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_kTmvcjnIEemCsK_z-Yl5Og" points="[22, -2, -71, 117]$[22, -97, -71, 22]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="__baqQDnIEemCsK_z-Yl5Og" id="(0.03636363636363636,0.05)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_kTn9kDnIEemCsK_z-Yl5Og" id="(0.7773584905660378,0.40540540540540543)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_v3ArwDnJEemCsK_z-Yl5Og" type="4019" source="_7q-wcDnGEemCsK_z-Yl5Og" target="_LdFFUDnJEemCsK_z-Yl5Og" routing="Rectilinear">
+    <children xmi:type="notation:DecorationNode" xmi:id="_v3ArwznJEemCsK_z-Yl5Og" type="6015">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_v3ArxDnJEemCsK_z-Yl5Og" x="-91" y="-40"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_v3ArwTnJEemCsK_z-Yl5Og" fontName="Segoe UI" fontHeight="12"/>
+    <element xmi:type="context:Relevance" href="smartmeetingroom.context#//@relevance.0"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_v3ArwjnJEemCsK_z-Yl5Og" points="[35, 29, -234, -124]$[35, 160, -234, 7]$[167, 160, -102, 7]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_v3B54DnJEemCsK_z-Yl5Og" id="(0.8037735849056604,0.21621621621621623)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_3qQwMDnKEemCsK_z-Yl5Og" type="4024" source="_O9j-8DnIEemCsK_z-Yl5Og" target="_Wz5-MDnKEemCsK_z-Yl5Og">
+    <styles xmi:type="notation:FontStyle" xmi:id="_3qQwMTnKEemCsK_z-Yl5Og" fontName="Segoe UI" fontHeight="12"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_3qQwMjnKEemCsK_z-Yl5Og" points="[9, 29, 14, -122]$[25, 158, 30, 7]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_4p95sDnKEemCsK_z-Yl5Og" type="4024" source="_EOTm8DnIEemCsK_z-Yl5Og" target="_U4O7sDnKEemCsK_z-Yl5Og" routing="Rectilinear">
+    <styles xmi:type="notation:FontStyle" xmi:id="_4p95sTnKEemCsK_z-Yl5Og" fontName="Segoe UI" fontHeight="12"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_4p95sjnKEemCsK_z-Yl5Og" points="[34, 29, -3, -110]$[34, 131, -3, -8]"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_4p-gwDnKEemCsK_z-Yl5Og" id="(0.4838709677419355,0.20833333333333334)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_5PzxsDnKEemCsK_z-Yl5Og" type="4024" source="_4hk6EDnHEemCsK_z-Yl5Og" target="_Qp89YDnKEemCsK_z-Yl5Og">
+    <styles xmi:type="notation:FontStyle" xmi:id="_5PzxsTnKEemCsK_z-Yl5Og" fontName="Segoe UI" fontHeight="12"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_5PzxsjnKEemCsK_z-Yl5Og" points="[7, 29, -29, -111]$[37, 153, 1, 13]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_hCutMDnLEemCsK_z-Yl5Og" type="4013" source="_4hk6EDnHEemCsK_z-Yl5Og" target="_YshssDnKEemCsK_z-Yl5Og">
+    <children xmi:type="notation:DecorationNode" xmi:id="_hCutMznLEemCsK_z-Yl5Og" type="6002">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_hCutNDnLEemCsK_z-Yl5Og" x="4" y="-44"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_hCutMTnLEemCsK_z-Yl5Og" fontName="Segoe UI" fontHeight="12"/>
+    <element xmi:type="context:Sensed" href="smartmeetingroom.context#//@acquisitions.0"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_hCutMjnLEemCsK_z-Yl5Og" points="[-21, -3, 84, 0]$[-88, -5, 17, -2]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_hDSG0DnLEemCsK_z-Yl5Og" id="(0.14285714285714285,0.5087719298245614)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_hDSG0TnLEemCsK_z-Yl5Og" id="(0.8495575221238938,0.44680851063829785)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_lo_tsDnLEemCsK_z-Yl5Og" type="4013" source="_O9j-8DnIEemCsK_z-Yl5Og" target="_jwABMDnKEemCsK_z-Yl5Og">
+    <children xmi:type="notation:DecorationNode" xmi:id="_lo_tsznLEemCsK_z-Yl5Og" type="6002">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_lo_ttDnLEemCsK_z-Yl5Og" x="9" y="42"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_lo_tsTnLEemCsK_z-Yl5Og" fontName="Segoe UI" fontHeight="12"/>
+    <element xmi:type="context:Sensed" href="smartmeetingroom.context#//@acquisitions.1"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_lo_tsjnLEemCsK_z-Yl5Og" points="[20, -1, -95, -2]$[106, -22, -9, -23]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_lpAUwDnLEemCsK_z-Yl5Og" id="(0.8347107438016529,0.47368421052631576)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_oXU8MDnLEemCsK_z-Yl5Og" type="4013" source="_EOTm8DnIEemCsK_z-Yl5Og" target="_g6o9oDnKEemCsK_z-Yl5Og">
+    <children xmi:type="notation:DecorationNode" xmi:id="_oXU8MznLEemCsK_z-Yl5Og" type="6002">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_oXU8NDnLEemCsK_z-Yl5Og" x="-3" y="8"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_oXU8MTnLEemCsK_z-Yl5Og" fontName="Segoe UI" fontHeight="12"/>
+    <element xmi:type="context:Sensed" href="smartmeetingroom.context#//@acquisitions.2"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_oXU8MjnLEemCsK_z-Yl5Og" points="[-2, 8, 0, -36]$[-2, 35, 0, -9]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_oXVjQDnLEemCsK_z-Yl5Og" id="(0.8369565217391305,0.8596491228070176)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_oXVjQTnLEemCsK_z-Yl5Og" id="(0.5,0.19148936170212766)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_HWfk0DpVEemqTIIetfViKQ" type="4024" source="_EOTm8DnIEemCsK_z-Yl5Og" target="_BYmqEDpVEemqTIIetfViKQ" routing="Rectilinear">
+    <styles xmi:type="notation:FontStyle" xmi:id="_HWfk0TpVEemqTIIetfViKQ" fontName="Segoe UI" fontHeight="12"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_HWfk0jpVEemqTIIetfViKQ" points="[42, 29, -7, -107]$[42, 116, -7, -20]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_HWhaADpVEemqTIIetfViKQ" id="(0.18156424581005587,0.49122807017543857)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_3hM1MDpWEemqTIIetfViKQ" type="4015" source="_Wz5-MDnKEemCsK_z-Yl5Og" target="_scHXIDpWEemqTIIetfViKQ">
+    <children xmi:type="notation:DecorationNode" xmi:id="_3hNcQDpWEemqTIIetfViKQ" type="6011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_3hNcQTpWEemqTIIetfViKQ" y="-10"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_3hM1MTpWEemqTIIetfViKQ" fontName="Segoe UI"/>
+    <element xmi:type="context:ValuesIn" href="smartmeetingroom.context#//@valuesin.0"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_3hM1MjpWEemqTIIetfViKQ" points="[31, -2, -48, 0]$[78, -3, -1, -1]"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_3hODUDpWEemqTIIetfViKQ" id="(0.019230769230769232,0.45)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_5lQ-sDpWEemqTIIetfViKQ" type="4015" source="_Qp89YDnKEemCsK_z-Yl5Og" target="_u1AhIDpWEemqTIIetfViKQ">
+    <children xmi:type="notation:DecorationNode" xmi:id="_5lQ-szpWEemqTIIetfViKQ" type="6011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_5lQ-tDpWEemqTIIetfViKQ" x="12" y="12"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_5lQ-sTpWEemqTIIetfViKQ" fontName="Segoe UI"/>
+    <element xmi:type="context:ValuesIn" href="smartmeetingroom.context#//@valuesin.1"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_5lQ-sjpWEemqTIIetfViKQ" points="[-16, 4, 108, 3]$[-115, 21, 9, 20]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_5lSM0DpWEemqTIIetfViKQ" id="(0.1568627450980392,0.475)"/>
+  </edges>
+</notation:Diagram>

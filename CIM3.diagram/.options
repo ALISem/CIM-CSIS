@@ -1,0 +1,7 @@
+# Tracing options for the CIM3.diagram plug-in
+
+# Common issues
+CIM3.diagram/debug=false
+
+# Visual IDs
+CIM3.diagram/debug/visualID=false

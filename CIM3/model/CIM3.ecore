@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="context" nsURI="context" nsPrefix="context">
+  <eClassifiers xsi:type="ecore:EClass" name="ContextElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Fromrelation" upperBound="-1"
+        eType="#//Relationship" eOpposite="#//Relationship/Tocontextelement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Torelation" upperBound="-1"
+        eType="#//Relationship" eOpposite="#//Relationship/Fromcontextelement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refinement" upperBound="-1"
+        eType="#//Refinement"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isAbstract" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isMonitorable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isVerifiable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isFactual" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="formalSpecification" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Property" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contToRelationship" upperBound="-1"
+        eType="#//Relationship"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contFromRelationship" upperBound="-1"
+        eType="#//Relationship"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="RefinementType">
+    <eLiterals name="AND"/>
+    <eLiterals name="OR" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Relationship">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Tocontextelement" lowerBound="1"
+        eType="#//ContextElement" eOpposite="#//ContextElement/Fromrelation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Fromcontextelement" lowerBound="1"
+        upperBound="-1" eType="#//ContextElement" eOpposite="#//ContextElement/Torelation"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="relfromRefinement" eType="#//Refinement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="relToContext" eType="#//ContextElement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="relFromContext" upperBound="-1"
+        eType="#//ContextElement"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ContextModel">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contextelements" upperBound="-1"
+        eType="#//ContextElement" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refinements" upperBound="-1"
+        eType="#//Refinement" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="relationships" upperBound="-1"
+        eType="#//Relationship" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sources" upperBound="-1"
+        eType="#//ContextSource" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="acquisitions" upperBound="-1"
+        eType="#//Acquisition" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entities" upperBound="-1"
+        eType="#//Entity" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="characterizations" upperBound="-1"
+        eType="#//Characterization" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="validity" upperBound="-1"
+        eType="#//Validity" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="timeconstraints" upperBound="-1"
+        eType="#//TimeConstraint" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="foci" upperBound="-1" eType="#//Focus"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="relevance" upperBound="-1"
+        eType="#//Relevance" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Refinement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//RefinementType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Refiningcontexts" upperBound="-1"
+        eType="#//ContextElement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refToRelationship" eType="#//Relationship"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Causal" eSuperTypes="#//Relationship"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Support" eSuperTypes="#//Relationship"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Acquisition">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="aquiredcontext" upperBound="-1"
+        eType="#//ContextElement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contextsource" upperBound="-1"
+        eType="#//ContextSource"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="updateFrequency" eType="#//UpdateType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ContextSource">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//SourceType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Static" eSuperTypes="#//Acquisition"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Profiled" eSuperTypes="#//Acquisition"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Derived" eSuperTypes="#//Acquisition">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="expression" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Sensed" eSuperTypes="#//Acquisition">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="quality" upperBound="-1"
+        eType="#//Quality" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="UpdateType">
+    <eLiterals name="Never"/>
+    <eLiterals name="Occasionally" value="1"/>
+    <eLiterals name="Frequently" value="2"/>
+    <eLiterals name="Continually" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="SourceType">
+    <eLiterals name="Physical"/>
+    <eLiterals name="Logical" value="1"/>
+    <eLiterals name="Virtual" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Conflict" eSuperTypes="#//Relationship"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Parallel" eSuperTypes="#//Relationship"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Entity">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//EntityType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="EntityType">
+    <eLiterals name="Person"/>
+    <eLiterals name="Object" value="1"/>
+    <eLiterals name="Place" value="2"/>
+    <eLiterals name="Device" value="3"/>
+    <eLiterals name="User" value="4"/>
+    <eLiterals name="Application" value="5"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Characterization">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="charEntity" lowerBound="1"
+        upperBound="-1" eType="#//Entity"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="charContext" lowerBound="1"
+        upperBound="-1" eType="#//ContextElement"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Atomic" eSuperTypes="#//ContextElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Composite" eSuperTypes="#//ContextElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="atomicContext" lowerBound="2"
+        upperBound="-1" eType="#//Atomic"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Congnitive" eSuperTypes="#//Atomic"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Social" eSuperTypes="#//Atomic"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Physical" eSuperTypes="#//Atomic"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Location" eSuperTypes="#//Physical"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Temporal" eSuperTypes="#//Atomic"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Past" eSuperTypes="#//Temporal"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Current" eSuperTypes="#//Temporal"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Future" eSuperTypes="#//Temporal"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Computing" eSuperTypes="#//Atomic"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Activity" eSuperTypes="#//Atomic"/>
+  <eClassifiers xsi:type="ecore:EClass" name="User" eSuperTypes="#//Atomic"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Identify" eSuperTypes="#//User"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Preference" eSuperTypes="#//User"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TimeConstraint">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Fixed" eSuperTypes="#//TimeConstraint">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="startTime" eType="#//Date"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="endTime" eType="#//Date"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Date">
+    <eLiterals name="Second"/>
+    <eLiterals name="Minute" value="1"/>
+    <eLiterals name="Hour" value="2"/>
+    <eLiterals name="Day" value="3"/>
+    <eLiterals name="Month" value="4"/>
+    <eLiterals name="Year" value="5"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Relative" eSuperTypes="#//TimeConstraint">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="expireTime" eType="#//Date"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Validity">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="constraint" upperBound="-1"
+        eType="#//TimeConstraint"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="validContext" upperBound="-1"
+        eType="#//ContextElement"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Focus">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="focalElement" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="agent" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="role" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="entity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isActivated" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Relevance">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="level" eType="#//RelevanceLevel"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="argument" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="focus" upperBound="-1"
+        eType="#//Focus"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="relevantContext" upperBound="-1"
+        eType="#//ContextElement"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="RelevanceLevel">
+    <eLiterals name="High"/>
+    <eLiterals name="Medium" value="1"/>
+    <eLiterals name="Low" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Quality">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="parameter" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+</ecore:EPackage>

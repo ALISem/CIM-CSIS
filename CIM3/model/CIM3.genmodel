@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/CIM3/src" modelPluginID="CIM3" modelName="CIM3"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="7.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>CIM3.ecore</foreignModel>
+  <genPackages prefix="Context" disposableProviderFactory="true" ecorePackage="CIM3.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="CIM3.ecore#//RefinementType">
+      <genEnumLiterals ecoreEnumLiteral="CIM3.ecore#//RefinementType/AND"/>
+      <genEnumLiterals ecoreEnumLiteral="CIM3.ecore#//RefinementType/OR"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="CIM3.ecore#//UpdateType">
+      <genEnumLiterals ecoreEnumLiteral="CIM3.ecore#//UpdateType/Never"/>
+      <genEnumLiterals ecoreEnumLiteral="CIM3.ecore#//UpdateType/Occasionally"/>
+      <genEnumLiterals ecoreEnumLiteral="CIM3.ecore#//UpdateType/Frequently"/>
+      <genEnumLiterals ecoreEnumLiteral="CIM3.ecore#//UpdateType/Continually"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="CIM3.ecore#//SourceType">
+      <genEnumLiterals ecoreEnumLiteral="CIM3.ecore#//SourceType/Physical"/>
+      <genEnumLiterals ecoreEnumLiteral="CIM3.ecore#//SourceType/Logical"/>
+      <genEnumLiterals ecoreEnumLiteral="CIM3.ecore#//SourceType/Virtual"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="CIM3.ecore#//EntityType">
+      <genEnumLiterals ecoreEnumLiteral="CIM3.ecore#//EntityType/Person"/>
+      <genEnumLiterals ecoreEnumLiteral="CIM3.ecore#//EntityType/Object"/>
+      <genEnumLiterals ecoreEnumLiteral="CIM3.ecore#//EntityType/Place"/>
+      <genEnumLiterals ecoreEnumLiteral="CIM3.ecore#//EntityType/Device"/>
+      <genEnumLiterals ecoreEnumLiteral="CIM3.ecore#//EntityType/User"/>
+      <genEnumLiterals ecoreEnumLiteral="CIM3.ecore#//EntityType/Application"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="CIM3.ecore#//Date">
+      <genEnumLiterals ecoreEnumLiteral="CIM3.ecore#//Date/Second"/>
+      <genEnumLiterals ecoreEnumLiteral="CIM3.ecore#//Date/Minute"/>
+      <genEnumLiterals ecoreEnumLiteral="CIM3.ecore#//Date/Hour"/>
+      <genEnumLiterals ecoreEnumLiteral="CIM3.ecore#//Date/Day"/>
+      <genEnumLiterals ecoreEnumLiteral="CIM3.ecore#//Date/Month"/>
+      <genEnumLiterals ecoreEnumLiteral="CIM3.ecore#//Date/Year"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="CIM3.ecore#//RelevanceLevel">
+      <genEnumLiterals ecoreEnumLiteral="CIM3.ecore#//RelevanceLevel/High"/>
+      <genEnumLiterals ecoreEnumLiteral="CIM3.ecore#//RelevanceLevel/Medium"/>
+      <genEnumLiterals ecoreEnumLiteral="CIM3.ecore#//RelevanceLevel/Low"/>
+    </genEnums>
+    <genClasses ecoreClass="CIM3.ecore#//ContextElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CIM3.ecore#//ContextElement/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CIM3.ecore#//ContextElement/Fromrelation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CIM3.ecore#//ContextElement/Torelation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CIM3.ecore#//ContextElement/refinement"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CIM3.ecore#//ContextElement/isAbstract"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CIM3.ecore#//ContextElement/isMonitorable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CIM3.ecore#//ContextElement/isVerifiable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CIM3.ecore#//ContextElement/isFactual"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CIM3.ecore#//ContextElement/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CIM3.ecore#//ContextElement/formalSpecification"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CIM3.ecore#//ContextElement/Property"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CIM3.ecore#//ContextElement/contToRelationship"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CIM3.ecore#//ContextElement/contFromRelationship"/>
+    </genClasses>
+    <genClasses ecoreClass="CIM3.ecore#//Relationship">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CIM3.ecore#//Relationship/Tocontextelement"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CIM3.ecore#//Relationship/Fromcontextelement"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CIM3.ecore#//Relationship/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CIM3.ecore#//Relationship/relfromRefinement"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CIM3.ecore#//Relationship/relToContext"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CIM3.ecore#//Relationship/relFromContext"/>
+    </genClasses>
+    <genClasses ecoreClass="CIM3.ecore#//ContextModel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CIM3.ecore#//ContextModel/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CIM3.ecore#//ContextModel/contextelements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CIM3.ecore#//ContextModel/refinements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CIM3.ecore#//ContextModel/relationships"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CIM3.ecore#//ContextModel/sources"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CIM3.ecore#//ContextModel/acquisitions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CIM3.ecore#//ContextModel/entities"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CIM3.ecore#//ContextModel/characterizations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CIM3.ecore#//ContextModel/validity"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CIM3.ecore#//ContextModel/timeconstraints"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CIM3.ecore#//ContextModel/foci"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CIM3.ecore#//ContextModel/relevance"/>
+    </genClasses>
+    <genClasses ecoreClass="CIM3.ecore#//Refinement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CIM3.ecore#//Refinement/type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CIM3.ecore#//Refinement/Refiningcontexts"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CIM3.ecore#//Refinement/refToRelationship"/>
+    </genClasses>
+    <genClasses ecoreClass="CIM3.ecore#//Causal"/>
+    <genClasses ecoreClass="CIM3.ecore#//Support"/>
+    <genClasses ecoreClass="CIM3.ecore#//Acquisition">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CIM3.ecore#//Acquisition/aquiredcontext"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CIM3.ecore#//Acquisition/contextsource"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CIM3.ecore#//Acquisition/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CIM3.ecore#//Acquisition/updateFrequency"/>
+    </genClasses>
+    <genClasses ecoreClass="CIM3.ecore#//ContextSource">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CIM3.ecore#//ContextSource/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CIM3.ecore#//ContextSource/type"/>
+    </genClasses>
+    <genClasses ecoreClass="CIM3.ecore#//Static"/>
+    <genClasses ecoreClass="CIM3.ecore#//Profiled"/>
+    <genClasses ecoreClass="CIM3.ecore#//Derived">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CIM3.ecore#//Derived/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="CIM3.ecore#//Sensed"/>
+    <genClasses ecoreClass="CIM3.ecore#//Conflict"/>
+    <genClasses ecoreClass="CIM3.ecore#//Parallel"/>
+    <genClasses ecoreClass="CIM3.ecore#//Entity">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CIM3.ecore#//Entity/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CIM3.ecore#//Entity/type"/>
+    </genClasses>
+    <genClasses ecoreClass="CIM3.ecore#//Characterization">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CIM3.ecore#//Characterization/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CIM3.ecore#//Characterization/charEntity"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CIM3.ecore#//Characterization/charContext"/>
+    </genClasses>
+    <genClasses ecoreClass="CIM3.ecore#//Atomic"/>
+    <genClasses ecoreClass="CIM3.ecore#//Composite">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CIM3.ecore#//Composite/atomicContext"/>
+    </genClasses>
+    <genClasses ecoreClass="CIM3.ecore#//Congnitive"/>
+    <genClasses ecoreClass="CIM3.ecore#//Social"/>
+    <genClasses ecoreClass="CIM3.ecore#//Physical"/>
+    <genClasses ecoreClass="CIM3.ecore#//Location"/>
+    <genClasses ecoreClass="CIM3.ecore#//Temporal"/>
+    <genClasses ecoreClass="CIM3.ecore#//Past"/>
+    <genClasses ecoreClass="CIM3.ecore#//Current"/>
+    <genClasses ecoreClass="CIM3.ecore#//Future"/>
+    <genClasses ecoreClass="CIM3.ecore#//Computing"/>
+    <genClasses ecoreClass="CIM3.ecore#//Activity"/>
+    <genClasses ecoreClass="CIM3.ecore#//User"/>
+    <genClasses ecoreClass="CIM3.ecore#//Identify"/>
+    <genClasses ecoreClass="CIM3.ecore#//Preference"/>
+    <genClasses ecoreClass="CIM3.ecore#//TimeConstraint">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CIM3.ecore#//TimeConstraint/name"/>
+    </genClasses>
+    <genClasses ecoreClass="CIM3.ecore#//Fixed">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CIM3.ecore#//Fixed/startTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CIM3.ecore#//Fixed/endTime"/>
+    </genClasses>
+    <genClasses ecoreClass="CIM3.ecore#//Relative">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CIM3.ecore#//Relative/expireTime"/>
+    </genClasses>
+    <genClasses ecoreClass="CIM3.ecore#//Validity">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CIM3.ecore#//Validity/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CIM3.ecore#//Validity/constraint"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CIM3.ecore#//Validity/validContext"/>
+    </genClasses>
+    <genClasses ecoreClass="CIM3.ecore#//Focus">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CIM3.ecore#//Focus/focalElement"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CIM3.ecore#//Focus/agent"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CIM3.ecore#//Focus/role"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CIM3.ecore#//Focus/entity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CIM3.ecore#//Focus/isActivated"/>
+    </genClasses>
+    <genClasses ecoreClass="CIM3.ecore#//Relevance">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CIM3.ecore#//Relevance/level"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CIM3.ecore#//Relevance/argument"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CIM3.ecore#//Relevance/focus"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CIM3.ecore#//Relevance/relevantContext"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
