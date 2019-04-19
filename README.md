@@ -2,7 +2,6 @@
 This project is about developing an eclipse-based graphical editor to support modeling of context information for intelligent context-sensitive systems (CSS). Particularly, it is designed to assist context identification and management (CIM).
 
 Contextual information can be specified in XMI format as shown in an example below:
-
 <?xml version="1.0" encoding="UTF-8"?>
 <context:ContextModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="context">
   <contextelements xsi:type="context:Composite" name="Room [r] is occupied" description="Activity" formalSpecification=""/>
