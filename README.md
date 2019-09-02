@@ -1,7 +1,8 @@
 # CIM-CSS
 This project is about developing an eclipse-based graphical editor to support modeling of context information for intelligent context-sensitive systems (CSS). Particularly, it is designed to assist context identification and management (CIM).
 
-Article Published:
+Article Published.
+
 Journal: IEEE Access
 Issue Date: DECEMBER 2019
 Volume: 7, Issue:1
