@@ -16,3 +16,5 @@ CIM-CSS: A Formal Modeling Approach to Context Identification and Management for
 https://ieeexplore.ieee.org/document/8772087
 
 https://www.researchgate.net/publication/334686948_CIM-CSS_A_Formal_Modeling_Approach_to_Context_Identification_and_Management_for_Intelligent_Context-Sensitive_Systems
+
+https://www.researchgate.net/profile/Ali_Baddour
