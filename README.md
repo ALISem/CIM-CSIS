@@ -1,6 +1,6 @@
 # CIM-CSS Source Code
 
-These folders are the Eclipse plug-ins form which the CIM-CSS tool is generated. Import these projects to take a look at the source code and the different EMF and GMF models.
+These folders are the Eclipse-based projects form which the CIM-CSS tool is generated. Import these projects to take a look at the source code and check the different EMF and GMF models.
 
 Option 1:
 
@@ -19,7 +19,7 @@ Option 2:
     Enter the GIT link and import
 
 
-In this  work, we developed an eclipse-based graphical editor to support modeling of context information for intelligent context-sensitive systems (CSS). Particularly, it is designed to assist context identification and management (CIM).
+In this  work, we've developed an eclipse-based graphical editor to support modeling of context information for intelligent context-sensitive systems (CSS). Particularly, it is designed to assist context identification and management (CIM).
 
 The resulting CIM-CSS Graphical Editor plug-in of my PhD's dissertation: building a graphical support tool based on the CIM-CSS methodology (Supervised by Prof. Jun Sang), using the Eclipse Modeling Framework and Graphical Modeling Framework
 
