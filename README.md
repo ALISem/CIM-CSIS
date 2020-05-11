@@ -21,7 +21,7 @@ Option 2:
 
 In this  work, we've developed an eclipse-based graphical editor to support modeling of context information for intelligent context-sensitive systems (CSS). Particularly, it is designed to assist context identification and management (CIM).
 
-The resulting CIM-CSS Graphical Editor plug-in of my PhD's dissertation: building a graphical support tool based on the CIM-CSS methodology (Supervised by Prof. Jun Sang), using the Eclipse Modeling Framework and Graphical Modeling Framework
+The resulting graphical support tool from A. Baddour’s PhD Dissertation at Chongqing University - School of Big Data and Software Engineering "Model-Based Context Identification and Management Methodology for Intelligent Systems Analysis and Design (CIM-CSS)" (Supervised by Prof. Jun Sang).
 
 Article Published.
 
