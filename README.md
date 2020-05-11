@@ -1,6 +1,6 @@
 # CIM-CSS Source Code
 
-These folders are the Eclipse-based projects form which the CIM-CSS tool is generated. Import these projects to take a look at the source code and check the different EMF and GMF models.
+These folders are the Eclipse-based projects form which the CIM-CSS tool is generated. Import these projects to take a look at the source code and check the different CIM3 EMF and GMF models.
 
 Option 1:
 
